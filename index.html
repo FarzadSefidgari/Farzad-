@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farzad — Web Studio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <div class="logo">FS<span>Studio</span></div>
+    <nav>
+      <a href="#home" data-i18n="nav_home"></a>
+      <a href="#services" data-i18n="nav_services"></a>
+      <a href="#portfolio" data-i18n="nav_portfolio"></a>
+      <a href="#pricing" data-i18n="nav_pricing"></a>
+      <a href="#about" data-i18n="nav_about"></a>
+      <a href="#contact" data-i18n="nav_contact"></a>
+    </nav>
+    <div class="lang-switch">
+      <button id="btn-en" class="active">EN</button>
+      <button id="btn-de">DE</button>
+    </div>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="container hero-inner">
+    <div>
+      <h1 data-i18n="hero_title"></h1>
+      <p class="lead" data-i18n="hero_sub"></p>
+      <div class="cta">
+        <a href="#contact" class="btn primary" data-i18n="hero_cta"></a>
+        <a href="#portfolio" class="btn ghost" data-i18n="hero_work"></a>
+      </div>
+    </div>
+    <img src="images/hero.svg" alt="" class="hero-art" />
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h2 data-i18n="svc_title"></h2>
+    <div class="grid three">
+      <div class="card">
+        <img src="images/web.svg" alt="Web" />
+        <h3 data-i18n="svc_web_title"></h3>
+        <p data-i18n="svc_web_desc"></p>
+      </div>
+      <div class="card">
+        <img src="images/seo.svg" alt="SEO" />
+        <h3 data-i18n="svc_seo_title"></h3>
+        <p data-i18n="svc_seo_desc"></p>
+      </div>
+      <div class="card">
+        <img src="images/social.svg" alt="Social" />
+        <h3 data-i18n="svc_sm_title"></h3>
+        <p data-i18n="svc_sm_desc"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="section alt">
+  <div class="container">
+    <h2 data-i18n="portfolio_title"></h2>
+    <div class="grid three">
+      <a class="work" href="#" aria-label="Project 1">
+        <img src="images/portfolio1.svg" alt="Project 1" />
+        <div class="work-meta">
+          <strong data-i18n="p1_title"></strong>
+          <span data-i18n="p1_tag"></span>
+        </div>
+      </a>
+      <a class="work" href="#" aria-label="Project 2">
+        <img src="images/portfolio2.svg" alt="Project 2" />
+        <div class="work-meta">
+          <strong data-i18n="p2_title"></strong>
+          <span data-i18n="p2_tag"></span>
+        </div>
+      </a>
+      <a class="work" href="#" aria-label="Project 3">
+        <img src="images/portfolio3.svg" alt="Project 3" />
+        <div class="work-meta">
+          <strong data-i18n="p3_title"></strong>
+          <span data-i18n="p3_tag"></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section">
+  <div class="container">
+    <h2 data-i18n="pricing_title"></h2>
+    <div class="grid three">
+      <div class="price card">
+        <h3 data-i18n="plan_basic"></h3>
+        <div class="price-num">€499</div>
+        <ul>
+          <li data-i18n="plan_item1"></li>
+          <li data-i18n="plan_item2"></li>
+          <li data-i18n="plan_item3"></li>
+        </ul>
+      </div>
+      <div class="price card featured">
+        <h3 data-i18n="plan_pro"></h3>
+        <div class="price-num">€999</div>
+        <ul>
+          <li data-i18n="plan_item4"></li>
+          <li data-i18n="plan_item5"></li>
+          <li data-i18n="plan_item6"></li>
+        </ul>
+      </div>
+      <div class="price card">
+        <h3 data-i18n="plan_custom"></h3>
+        <div class="price-num" data-i18n="plan_contact"></div>
+        <ul>
+          <li data-i18n="plan_item7"></li>
+          <li data-i18n="plan_item8"></li>
+          <li data-i18n="plan_item9"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section alt">
+  <div class="container about">
+    <img src="images/farzad.svg" class="avatar" alt="Farzad" />
+    <div>
+      <h2 data-i18n="about_title"></h2>
+      <p data-i18n="about_text"></p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2 data-i18n="contact_title"></h2>
+    <div class="grid two">
+      <form class="card" onsubmit="event.preventDefault(); alert(strings[curLang].thanks);">
+        <label>
+          <span data-i18n="form_name"></span>
+          <input type="text" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" required />
+        </label>
+        <label>
+          <span data-i18n="form_msg"></span>
+          <textarea rows="4" required></textarea>
+        </label>
+        <button class="btn primary" type="submit" data-i18n="form_send"></button>
+      </form>
+      <div class="card contact-box">
+        <p><strong>Email:</strong> farzad.sefidgari@gmail.com</p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/4917620311546" target="_blank">+49 176 20311546</a></p>
+        <p data-i18n="contact_note"></p>
+        <a class="btn ghost" target="_blank" href="https://wa.me/4917620311546">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>© <span id="y"></span> FS Studio</div>
+    <div class="footer-links">
+      <a href="#" data-i18n="f_privacy"></a>
+      <a href="#" data-i18n="f_terms"></a>
+      <a href="#" data-i18n="f_impressum"></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
